@@ -1,7 +1,9 @@
 import React from 'react'
 import { doctors } from '../assets/assets'
+import { useNavigate } from 'react-router-dom'
 
 const TopDoctors = () => {
+    const navigate = useNavigate();
     return (
         <div className='flex flex-col items-center gap-4 my-16 text-gray-900 md:mx-10'>
             <h1 className='text-3xl font-medium'>Top Doctors to Book</h1>
@@ -11,7 +13,7 @@ const TopDoctors = () => {
                 {
                     doctors.slice(0, 10).map((item, index) => (
 
-                        <div className='border border-blue-200 rounded-xl overflow-hidden cursor-pointer hover:translate-y-[-10px] transition-all duration-500'>
+                        <div onClick={()=> navigate(`/appointment/${item._id}`)} className='border border-blue-200 rounded-xl overflow-hidden cursor-pointer hover:translate-y-[-10px] transition-all duration-500'>
                             <img
                                 className='bg-blue-50'
                                 src={item.image} alt="" />
