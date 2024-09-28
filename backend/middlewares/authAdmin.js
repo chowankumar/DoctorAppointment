@@ -6,7 +6,7 @@ import jwt from "jsonwebtoken"
 //compare token email and password with admin
 //if match then next() otherwise success:false
 
-const authAdmin = async ()=>{
+const authAdmin = async (req,res,next)=>{
    
 
     try {
