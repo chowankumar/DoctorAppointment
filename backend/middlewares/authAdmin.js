@@ -29,3 +29,7 @@ const authAdmin = async ()=>{
         
     }
 }
+
+
+
+export default authAdmin
