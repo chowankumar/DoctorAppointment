@@ -3,6 +3,7 @@ import bcrypt from "bcrypt"
 import {v2 as cloudinary} from 'cloudinary'
 import doctorModel from './../models/doctorModel.js'
 import jwt from "jsonwebtoken"
+
 const addDoctor = async (req,res)=>{
     try {
         const {name,email,password,speciality,degree,experiece, about,fees,address} = req.body;
