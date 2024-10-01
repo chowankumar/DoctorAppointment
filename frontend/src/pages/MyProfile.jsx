@@ -3,12 +3,7 @@ import { AppContext } from '../context/AppContext';
 
 const MyProfile = () => {
   const { userData, setUserData } = useContext(AppContext);
-  
-   
   const [isEdit, setIsEdit] = useState(false);
-
-  
-   
 
   return userData && (
     <div className='max-w-lg flex flex-col gap-2 text-sm'>
