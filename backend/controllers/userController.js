@@ -8,10 +8,6 @@ const registerUser = async (req, res) => {
     try {
 
         const { name, email, password } = req.body;
-
-    
-
-       
         if (!name || !password || !email) {
             return res.json({ success: false, message: "Missing Details" })
         }
@@ -47,7 +43,7 @@ const registerUser = async (req, res) => {
 
         const token = jwt.sign({ id: userData._id }, process.env.JWT_SECRET)
 
-        res.json({ success:true,token })
+        res.json({ success:true,token})
 
 
     } catch (error) {
@@ -92,7 +88,7 @@ const getProfile = async(req,res)=>{
         const{userId} =   req.body;
 
     const userData = await userModel.findById(userId).select('-password')
-    res.json({success:true},userData);
+    res.json({success:true,userData});
         
     } catch (error) {
            console.log(error)

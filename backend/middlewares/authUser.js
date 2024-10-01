@@ -1,14 +1,6 @@
 import jwt from "jsonwebtoken"
 
-//get toke from header
-//if token not available show message
-//if available then decode it
-//compare token email and password with admin
-//if match then next() otherwise success:false
-
 const authUser = async (req,res,next)=>{
-   
-
     try {
         const {token} = req.headers;
 
