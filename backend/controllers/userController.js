@@ -124,4 +124,8 @@ const  updateProfile = async (req,res)=>{
         
     }
 }
+
+
+
+//////////boook and appointment///////////////
 export { registerUser,loginUser,getProfile,updateProfile}
